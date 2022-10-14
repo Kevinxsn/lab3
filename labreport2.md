@@ -77,4 +77,34 @@ headRequested, the first 'if' statement is used. We can see that the url contain
 headRequested, the second 'if' statement is used. This URL contains 'search', it means that the second if satement will be called. This if statement will help us to search the content after the equal marks and return the list that contains this content, even just part of it. 
 
 # Part two
-## 
+
+## Firstbug
+### Image of the test code
+![image](https://github.com/Kevinxsn/cse15l-lab-reports/blob/main/Screen%20Shot%202022-10-13%20at%2011.11.53%20PM.png) 
+### image of the originol code
+![image](https://github.com/Kevinxsn/lab3/blob/main/Screen%20Shot%202022-10-13%20at%209.52.40%20PM.png)
+
+### sympton and bug
+the sympton of the buggy method is that it does not change the list into the inverse form but return a list full of zero, this is becasue when the method try to copy the content by using the for loop, the list tit trys to copy this the one that just created, all of the lement in this list is zero. What I did is that I just replace the new Arraylist into thew orginal one, assign each element into the one the just created, which can perfectly solve this probelem
+### Improved code
+'''
+Improved code for reversed
+static int[] reversed(int[] arr) {
+    int[] newArray = new int[arr.length];
+    for(int i = 0; i < arr.length; i += 1) {
+      newArray[i] = arr[arr.length - i - 1];
+    }
+    return newArray;
+  }
+'''
+
+## Second bug
+### Image of the test code
+![image](https://github.com/Kevinxsn/cse15l-lab-reports/blob/main/Screen%20Shot%202022-10-13%20at%2011.36.51%20PM.png)
+### Image of the original code
+![image](https://github.com/Kevinxsn/lab3/blob/main/wrongcode2.png)
+### sympton and bug
+the sympton of this method is that it does not merge two input list but continuelly run the test until the storage used up or just return the first input list, this is because in the second while loop, the code is continually comparing the index1 and the size of the second list, which means if the while loop will stop does not related to any other things but the index1, but index does not do any change in this loop. To fix this problem. we can just change index1 into index2. 
+
+### Image of improved code
+![image](https://github.com/Kevinxsn/lab3/blob/main/improvedcode2.png)
