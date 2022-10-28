@@ -43,10 +43,10 @@ public class FileExample {
 	  List<File> result = new ArrayList<>();
 	  result.add(start);
 	  if(f.isDirectory()) {
-      File[] paths = f.listFiles();
-      for(File subFile: paths) {
-        result.add(subFile);
-      }
+	    File[] paths = f.listFiles();
+	    for(File subFile: paths) {
+	      result.add(subFile);
+	    }
 	  }
 	  return result;
 	}
