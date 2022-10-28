@@ -2,7 +2,7 @@
 
 ## Code of the simpest search engine
 
-'''
+```
 
 import java.net.URI;
 import java.util.ArrayList;
@@ -55,7 +55,7 @@ class SearchEngine {
         Server.start(port, new Handler());
     }
 }
-'''
+```
 
 ## Screenshots one
 ![Image](https://github.com/Kevinxsn/wavelet/blob/master/Screen%20Shot%202022-10-13%20at%206.59.30%20PM.png)
@@ -68,13 +68,13 @@ heandlRequested, the 'else' statement. This is becasue the URL doesn't contain a
 ![Image](https://github.com/Kevinxsn/wavelet/blob/master/Screen%20Shot%202022-10-13%20at%206.59.42%20PM.png)
 
 ### Method called, relevent argument 
-headRequested, the first 'if' statement is used. We can see that the url contains the add and there is some words after the  question mark. What I did is change the words before and after the equal marks into two element in a list and print that the word after the equal mark will be added into a list. 
+headRequested, the first 'if' statement is used. We can see that the url contains the add and there is some words after the  question mark. What I did is change the words before and after the equal marks into two element in a list called "useful_element". I created a new list called 'another_input' to store the element we need, in this case, the element we add, which is the element after the equal sign, useful_element[1]. Once the new URL is input and it contains "add", the method will help us to sotre the element after the euqal sign into "another_input" and print a sentences which tell the use that "String added:..." where ... is the element after the equal sign. 
 
 
 ## Screenshot three
 ![Image](https://github.com/Kevinxsn/wavelet/blob/master/Screen%20Shot%202022-10-13%20at%207.00.34%20PM.png)
 ### Method called, relevent argument 
-headRequested, the second 'if' statement is used. This URL contains 'search', it means that the second if satement will be called. This if statement will help us to search the content after the equal marks and return the list that contains this content, even just part of it. 
+headRequested, the second 'if' statement is used. This URL contains 'search', it means that the second if satement will be called because we use contain() method to test if there is a "search' string in the input and return a boolean. After .contain() method return true, we use the same method to split the element after the equal sign and use the element after the equal sign and the for loop to run throught the whole list "another_input" we created before. If there is a element in the list that equal to the element we need, we will creat a  string that contains every element we have added into another input and return it on the screen. 
 
 # Part two
 
@@ -87,7 +87,7 @@ headRequested, the second 'if' statement is used. This URL contains 'search', it
 ### sympton and bug
 the sympton of the buggy method is that it does not change the list into the inverse form but return a list full of zero, this is becasue when the method try to copy the content by using the for loop, the list tit trys to copy this the one that just created, all of the lement in this list is zero. What I did is that I just replace the new Arraylist into thew orginal one, assign each element into the one the just created, which can perfectly solve this probelem
 ### Improved code
-'''
+```
 Improved code for reversed
 static int[] reversed(int[] arr) {
     int[] newArray = new int[arr.length];
@@ -96,7 +96,7 @@ static int[] reversed(int[] arr) {
     }
     return newArray;
   }
-'''
+```
 
 ## Second bug
 ### Image of the test code
